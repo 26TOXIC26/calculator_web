@@ -65,7 +65,7 @@ body
     border-radius: 10px;
     border: 2px solid rgb(255, 255, 255);
     background: transparent;
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 .numbers
@@ -75,4 +75,63 @@ body
     transform: translate(0.19%, 0%);
     padding: 7px 5px 7px 5px;
     /* padding-bottom: 15px; */
+}
+
+.my-accounts
+{
+    width: 240px;
+    /* height: 140px; */
+    border: 2px solid rgb(255, 255, 255);
+    background: transparent;
+    position: fixed;
+    backdrop-filter: blur(7px);
+    margin-bottom: -900px;
+    color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
+.fa
+{
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa-github
+{
+    padding-left: 40px;
+    color: rgb(255, 255, 255);
+    /* background-color: white; */
+}
+.fa-instagram
+{
+    padding-left: 20px;
+    color: blueviolet;
+    /* background-color: rgb(252, 252, 252); */
+}
+
+.fa-linkedin
+{
+    padding-left: 35px;
+    color: rgb(0, 89, 255);
+}
+a.fa
+{
+    font-size: 30px;
+}
+
+.rights
+{
+    text-align: center;
+    font-size: large;
+}
+
+.social
+{
+    padding-top: -25px;
+    padding-left: 10px;
+    padding-bottom: 10px;
 }
