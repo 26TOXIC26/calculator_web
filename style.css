@@ -1,137 +1,96 @@
-*
-{
-    margin: 1.5px;
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; */
 }
 
-body
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80vh;
-    background: url(76YS.gif);
+body {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    place-items: center;
+    background-color: #000000;
 }
 
-.content
+.main
 {
-    background: transparent;
-    width: 450px;
-    height: 520px;
+    margin-top: 20%;
+    border: 2px solid #FCA311;
     border-radius: 15px;
-    border: 2px solid white;
-    backdrop-filter: blur(5px);
 }
 
-.number-input
+.calculator
 {
-    width: 438px;
-    height: 65px;
-    transform: translate(0.3%, 0%);
-    margin-top: 5px;
-    font-size: large;
-    border-radius: 10px;
-    border: 2px solid rgb(255, 255, 255);
-    background: transparent;
+    display: grid;
+    place-items: center;
+    padding: 20px 10px 10px 10px;
 }
 
-.math-move
+input
 {
-    width: 23.57%;
-    height: 80px;
-    font-size: xx-large;
-    border-radius: 10px;
-    border: 2px solid rgb(255, 255, 255);
+    width: 95%;
+    height: 30px;
+    font-size: 20px;
     background: transparent;
+    border: none;
+    border-bottom: 1px solid #ffffff;
     color: white;
 }
-.number
-{
-    width: 23.57%;
-    height: 80px;
-    font-size: xx-large;
-    border-radius: 10px;
-    border: 2px solid rgb(255, 255, 255);
+
+button {
+    width: 50px;
+    height: 30px;
     background: transparent;
     color: white;
+    margin: 10px 5px;
+    font-size: 18px;
+    border-radius: 0.5em;
+    cursor: pointer;
+    border: 2px solid #e8e8e8;
+    transition: all 0.01s;
+    box-shadow: 0px 6px 5px #000000;
 }
-.iqual
-{
-    width: 48.5%;
-    height: 80px;
-    font-size: xx-large;
-    border-radius: 10px;
-    border: 2px solid rgb(255, 255, 255);
-    background: transparent;
-    color: rgb(255, 255, 255);
+  
+button:active {
+    background-color: #FCA311;
+    color: #14213D;
+    border: 1px solid #14213D;
+    transform: translateY(2px);
 }
 
-.numbers
+.equal
+{
+    width: 115px;
+    background-color: #FCA311;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+svg
 {
     width: auto;
-    height: auto;
-    transform: translate(0.19%, 0%);
-    padding: 7px 5px 7px 5px;
-    /* padding-bottom: 15px; */
+    height: 25px;
 }
 
-.my-accounts
+.head
 {
-    width: 240px;
-    /* height: 140px; */
-    border: 2px solid rgb(255, 255, 255);
-    background: transparent;
-    position: fixed;
-    backdrop-filter: blur(7px);
-    margin-bottom: -880px;
-    color: rgb(255, 255, 255);
-    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.fa
+.head button
 {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    text-decoration: none;
+    /* right: 0; */
+    margin-left: 210px;
+    position: absolute;
+    border: none;
+    box-shadow: none;
 }
 
-.fa-github
+.head button:active
 {
-    padding-left: 30px;
-    color: rgb(255, 255, 255);
-    /* background-color: white; */
-}
-.fa-instagram
-{
-    padding-left: 10px;
-    color: rgb(255, 21, 185);
-    /* background-color: rgb(252, 252, 252); */
-}
-
-.fa-linkedin
-{
-    padding-left: 25px;
-    color: rgb(0, 89, 255);
-}
-a.fa
-{
-    font-size: 20px;
-}
-
-.rights
-{
-    text-align: center;
-    font-size: large;
-}
-
-.social
-{
-    padding-top: -25px;
-    padding-left: 10px;
-    padding-bottom: 10px;
+    background-color: transparent;
+    box-shadow: none;
 }
