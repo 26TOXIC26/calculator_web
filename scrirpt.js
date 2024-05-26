@@ -8,7 +8,7 @@ function addToDisplay(value) {
     if (displayValue === "0" && value !== "." && value !== "+" && value !== "*" && value !== "/" && value !== "%" && value !== "**") {
         displayValue = value;
     }
-    else if (operator.includes(lastChar) && operator.includes(value)) {
+    else if (operator.includes(lastChar) && operator.includes(value) || (lastChar === "." && operator.includes(value)) || (lastChar === "." && value === ".") || (lastChar === "." && value === "=") || (operator.includes(lastChar) && value === ".") || (displayValue.includes(".") && value === ".")) {
         displayValue = displayValue;
     }
     else {
@@ -29,16 +29,30 @@ function clearDisplay() {
 }
 
 function deleteLast() {
-  if (displayValue.length === 1) {
+  displayValue = displayValue.toString();
+  if (displayValue.length === 1)
     displayValue = "0";
-  }
-  else if (displayValue[displayValue.length - 1] === "*" && displayValue[displayValue.length - 2] === "*") {
+  else if (displayValue[displayValue.length - 1] === "*" && displayValue[displayValue.length - 2] === "*")
     displayValue = displayValue.slice(0, -2);
-  }
   else
-  {
     displayValue = displayValue.slice(0, -1);
-    console.log(displayValue);
-  }
   document.getElementById('display').value = displayValue;
 }
+
+document.addEventListener('keydown', (event) => {
+  const key = event.key;
+
+  if (key >= '0' && key <= '9') {
+      addToDisplay(key);
+  } else if (key === '.') {
+      addToDisplay(key);
+  } else if (key === '=' || key === 'Enter') {
+      equal();
+  } else if (key === 'Backspace') {
+      deleteLast();
+  } else if (key === 'Escape') {
+      clearDisplay();
+  } else if (key === '+' || key === '-' || key === '*' || key === '/') {
+      addToDisplay(key);
+  }
+});

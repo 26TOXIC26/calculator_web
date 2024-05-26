@@ -73,6 +73,11 @@ svg
     height: 25px;
 }
 
+.head button
+{
+    border: none;
+}
+
 .head
 {
     display: flex;
